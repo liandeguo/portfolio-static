@@ -8,9 +8,21 @@ importers:
 
   .:
     dependencies:
+      cursix:
+        specifier: ^1.1.4
+        version: 1.1.4
+      gsap:
+        specifier: ^3.15.0
+        version: 3.15.0
       lenis:
         specifier: ^1.3.23
         version: 1.3.23
+      lenis-svelte:
+        specifier: ^0.2.0
+        version: 0.2.0(svelte@5.55.7)
+      mouse-follower:
+        specifier: ^1.1.2
+        version: 1.1.2
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^7.0.1
@@ -343,6 +355,9 @@ packages:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
 
+  cursix@1.1.4:
+    resolution: {integrity: sha512-QLNzVbCXhcvXK6qgU/RRqbrOmiS/8VNSgaQ6+S/AeLzs5TUCUc8oQtWNqe9X9yr5ta1+8HEaIhh4MGQIuolAeQ==}
+
   deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
@@ -386,6 +401,9 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
+  gsap@3.15.0:
+    resolution: {integrity: sha512-dMW4CWBTUK1AEEDeZc1g4xpPGIrSf9fJF960qbTZmN/QwZIWY5wgliS6JWl9/25fpTGJrMRtSjGtOmPnfjZB+A==}
+
   is-reference@3.0.3:
     resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
 
@@ -396,6 +414,11 @@ packages:
   kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
+
+  lenis-svelte@0.2.0:
+    resolution: {integrity: sha512-1AeoPU7FC4gcPKNuCb+pWA2vYpUa29IP4Y5xmp5HRhOt3l1xYeW6INXRkt2m8Qm5JgaskEqoMyi9IK8bLKS4Ig==}
+    peerDependencies:
+      svelte: ^4.2.18
 
   lenis@1.3.23:
     resolution: {integrity: sha512-YxYq3TJqj9sJNv0V9SkyQHejt14xwyIwgDaaMK89Uf9SxQfIszu+gTQSSphh6BWlLTNVKvvXAGkg+Zf+oFIevg==}
@@ -490,6 +513,9 @@ packages:
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
+
+  mouse-follower@1.1.2:
+    resolution: {integrity: sha512-Wa/3MKMNWW1qy7XuG34NMRAm504p0PckJU4yTyXCoNYFaaIcZi+bpnTg0L2u8QuGBYgs2ue84wGCPIaQQzRV3Q==}
 
   mrmime@2.0.1:
     resolution: {integrity: sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==}
@@ -897,6 +923,8 @@ snapshots:
 
   cookie@0.6.0: {}
 
+  cursix@1.1.4: {}
+
   deepmerge@4.3.1: {}
 
   detect-libc@2.1.2: {}
@@ -923,6 +951,8 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
+  gsap@3.15.0: {}
+
   is-reference@3.0.3:
     dependencies:
       '@types/estree': 1.0.9
@@ -930,6 +960,15 @@ snapshots:
   jiti@2.7.0: {}
 
   kleur@4.1.5: {}
+
+  lenis-svelte@0.2.0(svelte@5.55.7):
+    dependencies:
+      lenis: 1.3.23
+      svelte: 5.55.7
+    transitivePeerDependencies:
+      - '@nuxt/kit'
+      - react
+      - vue
 
   lenis@1.3.23: {}
 
@@ -987,6 +1026,8 @@ snapshots:
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  mouse-follower@1.1.2: {}
 
   mrmime@2.0.1: {}
 
