@@ -70,44 +70,52 @@
         });
 
         listItems.forEach((item, i) => {
-        const previousItem = listItems[i - 1];
-        if (previousItem) {
-            // Right Now
-            tl.set(item, { color: "#FFFFFF", backgroundColor: "#000000" }, 0.5 * i)
-            .to(
-                slides[i],
-                {
-                autoAlpha: 1,
-                duration: 0.2
-                },
-                "<"
-            )
-            // Previous
-            .set(previousItem, { color: "#000000", backgroundColor: "#f2f1ef" }, "<")
-            .to(
-                slides[i - 1],
-                {
-                autoAlpha: 0,
-                duration: 0.2
-                },
-                "<"
-            );
-        } else {
-            // First
-            gsap.set(item, { color: "#FFFFFF", backgroundColor: "#000000" });
-            gsap.set(slides[i], { autoAlpha: 1 });
-        }
+            const hr = item.querySelector('.progress-hr')
+            const previousItem = listItems[i - 1];
+            if (previousItem) {
+                const prevHr = previousItem.querySelector('.progress-hr');
+                // Right Now
+                tl.set(item, { color: "#000000", backgroundColor: "#f2f1ef" }, 0.5 * i)
+                .to(
+                    slides[i],
+                    {
+                    autoAlpha: 1,
+                    duration: 0.2
+                    },
+                    "<"
+                ).fromTo(hr, { width: "0%" },           // start from 0
+                { width: "100%", duration: 0.4, ease: "power2.out" },
+                "<")
+                // Previous
+                .set(previousItem, { color: "#000000", backgroundColor: "#f2f1ef" }, "<")
+                .set(
+                    slides[i - 1],
+                    {
+                    autoAlpha: 0,
+                    duration: 0.4
+                    },
+                    "<"
+                ).fromTo(prevHr, { width: "100%" }, {width: "0%",duration: 0.2 }, "<");;
+            } else {
+                // First
+                gsap.set(item, { color: "#000000", backgroundColor: "#f2f1ef" });
+                gsap.set(slides[i], { autoAlpha: 1 });
+            }
+            });
+            tl.to(
+            fill,
+            {
+                scaleY: 1,
+                transformOrigin: "top left",
+                ease: "none",
+                duration: tl.duration()
+            },
+            0
+            ).to({}, {});
+            listItems.forEach((item, i) => {
         });
-        tl.to(
-        fill,
-        {
-            scaleY: 1,
-            transformOrigin: "top left",
-            ease: "none",
-            duration: tl.duration()
-        },
-        0
-        ).to({}, {});
+
+        
     })
 
 </script>
@@ -129,39 +137,12 @@
 
 <ScrollReveal></ScrollReveal>
 
-<!-- <section class="projects px-(--inner-padding) bg-(--color-secondary) h-screen w-screen">
-    <h2 style="font-size: 10cqi;">Projects</h2>
-    <div class="content ">
-        <div class="info">
-            <p class="slide">fienfgouerbgiuretbuigberougrp;stbgyubtrsilgbhdryitbgyi</p>
-            <p class="slide">fienfgouerbgiuretbuigberougrp;stbgyubtrsilgbhdryitbgyi</p>
-            <p class="slide">fienfgouerbgiuretbuigberougrp;stbgyubtrsilgbhdryitbgyi</p>
-        </div>
-        <div class="list w-max h-full">
-                <span class="projectEl">
-                    <h3 class="uppercase z-10">Symptom Explorer</h3>
-                    <div class="projectImg w-full h-12 bg-[url('/assets/hannoverImg.webp')] bg-cover">
-                    </div>
-                </span>
-                <hr>
-                <span class="projectEl">
-                    <h3 class="uppercase">Orphan Disease Clinical Trials Research</h3>
-                </span>
-                <hr>
-                <span class="projectEl">
-                    <h3 class="uppercase">Homelab</h3>
-                </span>
-                <hr>
-        </div>
-    </div>
-</section> -->
-
 <section class="projects section pin-section w-full h-screen flex flex-col px-(--inner-padding) py-12 items-start bg-(--color-secondary) z-0">
     <h2 style="font-size: 10cqi">Projects</h2>
     <div class="content w-full mt-12 flex px-0 py-3 relative ">
         <div class="right flex-1 text-left relative">
             <div class="slide center">
-                <p>ABC</p>
+                <p><b>Symptom Explorer</b> is a concept showing how medical datasets can be structured and made usable.  </p>
             </div>
             <div class="slide center">
                 <p>CDE</p>
@@ -171,15 +152,27 @@
             </div>
         </div>
 
-        <ul class="list m-0 p-o pr-3 list-none grow-0">
-            <li>
-                <h3>Symptom Explorer</h3>
+        <ul class="list m-0 p-0 pr-3 list-none grow-0">
+            <li class="">
+                <a href="" class="flex items-center" >
+                    <h3 data-cursor-text="View">Symptom Explorer</h3> 
+                    <p class="ml-2">[01]</p>
+                </a>
+                <hr class="progress-hr">
             </li>
             <li>
-                <h3>Clinical Trial Research</h3>
+                <a href="" class="flex items-center">
+                    <h3 data-cursor-text="View">Orphan Diseases Research</h3> 
+                    <p class="ml-2">[02]</p>
+                </a>
+                <hr class="progress-hr">
             </li>
             <li>
-                <h3>Homelab</h3>
+                <a href="" class="flex items-center" >
+                    <h3 data-cursor-text="View">Homelab</h3> 
+                    <p class="ml-2">[03]</p>
+                </a>
+                <hr class="progress-hr">
             </li>
         </ul>
   </div>

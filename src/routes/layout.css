@@ -105,6 +105,11 @@ h2 {
     font-size: var(--title-9-size);
 }
 
+b {
+    font-family: 'Cormorant Garamond';
+    font-size: var(--title-4-size)
+}
+
 .projects h3 {
     @apply text-nowrap;
     font-size: var(--title-4-size);
@@ -114,8 +119,8 @@ p {
     font-size: var(--text-regular);
 }
 
-hr {
-    @apply text-[#3B3430] w-full mb-3;
+.progress-hr {
+    @apply text-[#3B3430] w-full mb-2 border;
 }
 .socials a img {
     @apply w-6 h-6
@@ -159,4 +164,12 @@ hr {
     opacity: 0;
     visibility: hidden;
     border-radius: 10px;
+}
+
+.list li {
+    @apply px-2;
+}
+
+.list li span:hover {
+    color: #000080;
 }
