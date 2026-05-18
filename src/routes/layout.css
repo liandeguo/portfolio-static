@@ -90,6 +90,7 @@
 
 * {
     font-family: 'DM Mono';
+    box-sizing: border-box;
 }
 
 h1 {
@@ -104,10 +105,18 @@ h2 {
     font-size: var(--title-9-size);
 }
 
+.projects h3 {
+    @apply text-nowrap;
+    font-size: var(--title-4-size);
+}
+
 p {
     font-size: var(--text-regular);
 }
 
+hr {
+    @apply text-[#3B3430] w-full mb-3;
+}
 .socials a img {
     @apply w-6 h-6
 }
@@ -127,7 +136,7 @@ p {
 	@apply min-h-screen;
 }
 .textRevealWrapper {
-	@apply h-dvh relative text-3xl;
+	@apply h-dvh relative text-3xl uppercase;
     z-index: 10;
 }
 .text {
@@ -136,4 +145,18 @@ p {
 }
 .char {
     opacity: 0.1;
+}
+
+.projectEl {
+    @apply flex overflow-hidden;
+    font-size: 120px;
+}
+
+.right .slide {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
 }
