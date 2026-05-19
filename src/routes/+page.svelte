@@ -6,6 +6,8 @@
     import Cursix from "cursix";
     import Nav from '$lib/Nav.svelte'
     import ScrollReveal from '$lib/ScrollReveal.svelte'
+    import Volunteering from '$lib/Volunteering.svelte'
+
     import github from '$lib/assets/icons/github.svg'
     import x from '$lib/assets/icons/x.svg'
     import LinkedIn from '$lib/assets/icons/linkedin.svg'
@@ -95,7 +97,7 @@
                     duration: 0.4
                     },
                     "<"
-                ).fromTo(prevHr, { width: "100%" }, {width: "0%",duration: 0.2 }, "<");;
+                ).fromTo(prevHr, { width: "100%" }, {width: "0%", border: "0",duration: 0.1 }, "<");;
             } else {
                 // First
                 gsap.set(item, { color: "#000000", backgroundColor: "#f2f1ef" });
@@ -154,21 +156,21 @@
 
         <ul class="list m-0 p-0 pr-3 list-none grow-0">
             <li class="">
-                <a href="" class="flex items-center" >
+                <a href="#" class="flex items-center" >
                     <h3 data-cursor-text="View">Symptom Explorer</h3> 
                     <p class="ml-2">[01]</p>
                 </a>
                 <hr class="progress-hr">
             </li>
             <li>
-                <a href="" class="flex items-center">
+                <a href="#" class="flex items-center">
                     <h3 data-cursor-text="View">Orphan Diseases Research</h3> 
                     <p class="ml-2">[02]</p>
                 </a>
                 <hr class="progress-hr">
             </li>
             <li>
-                <a href="" class="flex items-center" >
+                <a href="#" class="flex items-center" >
                     <h3 data-cursor-text="View">Homelab</h3> 
                     <p class="ml-2">[03]</p>
                 </a>
@@ -177,4 +179,5 @@
         </ul>
   </div>
 </section>
-<section class="section"></section>
+<!-- <section class="section"></section> -->
+<!-- <Volunteering></Volunteering> -->
