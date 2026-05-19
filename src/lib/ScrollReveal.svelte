@@ -4,18 +4,43 @@
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
     gsap.registerPlugin(ScrollTrigger);
-
+    let lines = $state();
     // Define your lines with words and optional classes
-   	const lines = [
+   	const linesDesktop = [
         { text: "I'm 17, based in Hannover, and I've been building" },
         { text: 'things for 9 years. Currently co-founding a' },
         { text: 'startup, researching on orphan disease ' },
         { text: 'clinical trials and finishing my Abitur.' } ];
 
+    const linesMobile = [
+        { text: "I'm 17, based in Hannover," },
+        { text: "I've been building things" } ,
+        { text: "for 9 years. Currently co-founding" } ,
+        { text: "a startup, researching on" } ,
+        { text: "orphan disease clinical trials" } ,
+        { text: "and finishing my Abitur." } ,
+    ]
     // Define which words get special classes
     const specialWords = {
         "Hannover": "hannoverEl",
     };
+
+    onMount(() => {
+		const check = () => {
+			if (innerWidth > 640) {
+				lines = linesDesktop
+			} else {
+                lines = linesMobile
+				// Small screen (≤ 640px)
+				console.log('Small screen - execute something');
+				// your code here
+			}
+		};
+
+		check();
+		addEventListener('resize', check);
+		return () => removeEventListener('resize', check);
+	});
 
     let wrapper;
     let textRevealWrapper;
@@ -32,7 +57,6 @@
                 end: '+=150%',
                 scrub: true,
                 pin: textRevealWrapper,
-                markers: false,
             }
         })
         .to(chars, { opacity: 1, stagger: 0.08 }, 0);
