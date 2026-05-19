@@ -6,12 +6,18 @@
     import Cursix from "cursix";
     import Nav from '$lib/Nav.svelte'
     import ScrollReveal from '$lib/ScrollReveal.svelte'
-    import Volunteering from '$lib/Volunteering.svelte'
 
     import github from '$lib/assets/icons/github.svg'
     import x from '$lib/assets/icons/x.svg'
     import LinkedIn from '$lib/assets/icons/linkedin.svg'
-    
+
+    const projects = [
+        {name: 'Symptom Explorer', img: 'https://assets.codepen.io/16327/portrait-image-8.jpg', url: '#'},
+        {name: 'Orphan Disease Research', img: 'https://assets.codepen.io/16327/portrait-image-3.jpg', url: '#'},
+        {name: 'Homelab', img: 'https://assets.codepen.io/16327/portrait-image-4.jpg', url: '#'},
+    ]
+
+    // Cursor
     onMount(async () => {
         Cursix.registerGSAP(gsap);
         const hannoverEl = document.getElementById('hannoverEl');
@@ -44,82 +50,82 @@
             cursor.removeImg()
         });
     });
-    gsap.registerPlugin(ScrollTrigger);
+
+    // Projects Image Cursor Preview GSAP
     onMount(() => {
-        
-        
-        const list = document.querySelector(".list");
-        const fill = document.querySelector(".fill");
-        const listItems = gsap.utils.toArray("li", list);
-        const slides = gsap.utils.toArray(".slide");
+        gsap.set(".project img.swipeimage", { yPercent: -50, xPercent: -50 });
 
-        const pinSections = gsap.utils.toArray(".pin-section");
-        const lists = gsap.utils.toArray(".list");
-        const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".pin-section",
-            start: "top top",
-            end: "+=" + listItems.length * 50 + "%",
-            pin: true,
-            scrub: true
-        }
-        });
+        let firstEnter;
 
-        fill &&
-        gsap.set(fill, {
-            scaleY: 1 / listItems.length,
-            transformOrigin: "top left"
-        });
-
-        listItems.forEach((item, i) => {
-            const hr = item.querySelector('.progress-hr')
-            const previousItem = listItems[i - 1];
-            if (previousItem) {
-                const prevHr = previousItem.querySelector('.progress-hr');
-                // Right Now
-                tl.set(item, { color: "#000000", backgroundColor: "#f2f1ef" }, 0.5 * i)
-                .to(
-                    slides[i],
-                    {
-                    autoAlpha: 1,
-                    duration: 0.2
-                    },
-                    "<"
-                ).fromTo(hr, { width: "0%" },           // start from 0
-                { width: "100%", duration: 0.4, ease: "power2.out" },
-                "<")
-                // Previous
-                .set(previousItem, { color: "#000000", backgroundColor: "#f2f1ef" }, "<")
-                .set(
-                    slides[i - 1],
-                    {
-                    autoAlpha: 0,
-                    duration: 0.4
-                    },
-                    "<"
-                ).fromTo(prevHr, { width: "100%" }, {width: "0%", border: "0",duration: 0.1 }, "<");;
+        gsap.utils.toArray(".project").forEach((el) => {
+        const image = el.querySelector("img.swipeimage"),
+            setX = gsap.quickTo(image, "x", { duration: 0.4, ease: "power3" }),
+            setY = gsap.quickTo(image, "y", { duration: 0.4, ease: "power3" }),
+            align = (e) => {
+            if (firstEnter) {
+                setX(e.clientX, e.clientX); //https://gsap.com/docs/v3/GSAP/gsap.quickTo()/#optionally-define-a-start-value
+                setY(e.clientY, e.clientY);
+                firstEnter = false;
             } else {
-                // First
-                gsap.set(item, { color: "#000000", backgroundColor: "#f2f1ef" });
-                gsap.set(slides[i], { autoAlpha: 1 });
+                setX(e.clientX);
+                setY(e.clientY);
             }
-            });
-            tl.to(
-            fill,
-            {
-                scaleY: 1,
-                transformOrigin: "top left",
-                ease: "none",
-                duration: tl.duration()
             },
-            0
-            ).to({}, {});
-            listItems.forEach((item, i) => {
+            startFollow = () => document.addEventListener("mousemove", align),
+            stopFollow = () => document.removeEventListener("mousemove", align),
+            fade = gsap.to(image, {
+            autoAlpha: 1,
+            ease: "none",
+            paused: true,
+            duration: 0.1,
+            onReverseComplete: stopFollow
+            });
+
+        el.addEventListener("mouseenter", (e) => {
+            firstEnter = true;
+            fade.play();
+            startFollow();
+            align(e);
         });
 
-        
+        el.addEventListener("mouseleave", () => fade.reverse());
+        });
     })
 
+    onMount(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects",
+            start: "top top",
+            end: "+=150%",           
+            pin: true,
+            scrub: 1,}
+        });
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top 80%",       
+                end: "top 20%",         
+                scrub: 1.5,             
+            }
+            })
+            .to("#projectTitle", {
+                opacity: 1,
+                y: 0,
+                stagger: 0.15,
+                ease: "power2.out"
+        });
+
+        tl.to(".project", {
+            opacity: 1,
+            y: 0,                      // Move up to original position
+            stagger: 0.2,              // If you have multiple texts
+            ease: "power2.out"
+        });
+
+    })
 </script>
 <Nav></Nav>
 <section class="hero w-screen h-screen bg-(--color-secondary) flex flex-col justify-between px-(--inner-padding) pt-12">
@@ -139,43 +145,20 @@
 
 <ScrollReveal></ScrollReveal>
 
-<section class="projects section pin-section w-full h-screen flex flex-col px-(--inner-padding) py-12 items-start bg-(--color-secondary) z-0">
-    <h2 style="font-size: 10cqi">Projects</h2>
-    <div class="content w-full mt-12 flex px-0 py-3 relative ">
-        <div class="right flex-1 text-left relative">
-            <div class="slide center">
-                <p><b>Symptom Explorer</b> is a concept showing how medical datasets can be structured and made usable.  </p>
-            </div>
-            <div class="slide center">
-                <p>CDE</p>
-            </div>
-            <div class="slide center">
-                <p>EFG</p>
-            </div>
-        </div>
-
-        <ul class="list m-0 p-0 pr-3 list-none grow-0">
-            <li class="">
-                <a href="#" class="flex items-center" >
-                    <h3 data-cursor-text="View">Symptom Explorer</h3> 
-                    <p class="ml-2">[01]</p>
-                </a>
-                <hr class="progress-hr">
-            </li>
-            <li>
-                <a href="#" class="flex items-center">
-                    <h3 data-cursor-text="View">Orphan Diseases Research</h3> 
-                    <p class="ml-2">[02]</p>
-                </a>
-                <hr class="progress-hr">
-            </li>
-            <li>
-                <a href="#" class="flex items-center" >
-                    <h3 data-cursor-text="View">Homelab</h3> 
-                    <p class="ml-2">[03]</p>
-                </a>
-                <hr class="progress-hr">
-            </li>
+<section id="projects" class="projects section pin-section w-full h-screen flex flex-col px-(--inner-padding) py-12 items-start bg-(--color-secondary) z-0">
+    <h2 id="projectTitle" style="font-size: 10cqi; opacity: 0;  transform: translateY(80px);">Projects</h2>
+    <div class="w-full flex justify-center">
+        <ul class="list m-0 p-0 pr-3 list-none w-min">
+            {#each projects as project, i}
+                <li class="project" data-cursor="-hidden" style="opacity: 0; transform: translateY(40px);">
+                    <img class="swipeimage" src="{project.img}">
+                    <a href="{project.url}" class="flex items-center pr-12">
+                        <h3 style="">{project.name}</h3>
+                        <p class="ml-2">[0{i+1}]</p>
+                    </a>
+                </li> 
+                <hr class="project" style="opacity: 0; transform: translateY(40px);">
+            {/each}
         </ul>
   </div>
 </section>

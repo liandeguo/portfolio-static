@@ -112,7 +112,10 @@ b {
 
 .projects h3 {
     @apply text-nowrap;
-    font-size: var(--title-4-size);
+    font-size: var(--title-6-size);
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 500;
 }
 
 p {
@@ -152,19 +155,7 @@ p {
     opacity: 0.1;
 }
 
-.projectEl {
-    @apply flex overflow-hidden;
-    font-size: 120px;
-}
 
-.right .slide {
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    opacity: 0;
-    visibility: hidden;
-    border-radius: 10px;
-}
 
 .list li {
     @apply px-2;
@@ -172,4 +163,19 @@ p {
 
 .list li span:hover {
     color: #000080;
+}
+
+
+img.swipeimage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
