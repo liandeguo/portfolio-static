@@ -93,6 +93,19 @@
     box-sizing: border-box;
 }
 
+*::selection {
+  background: #000000;
+  color: #ffffff;
+}
+*::-moz-selection {
+  background: #000000;
+  color: #ffffff;
+}
+*::-webkit-selection {
+  background: #000000;
+  color: #ffffff;
+}
+
 h1 {
     font-family: 'Cormorant Garamond';
     font-weight: 500;
@@ -191,18 +204,21 @@ img.swipeimage {
   pointer-events: none;
 }
 
-#homelabImg {
-    display: none
-}
-
-#symptomexplorerImg {
-    display: none;
-}
-
-#orphandiseaseImg {
+#researchProject:hover #researchProjectImg {
     display: block;
 }
 
+#symptomExplorerProjectImg {
+    opacity: 0;
+}
+
+#researchProjectImg {
+    opacity: 0;
+}
+
+#homelabProjectImg {
+    opacity: 0;
+}
 
 
 
@@ -223,6 +239,16 @@ img.swipeimage {
         font-family: 'Cormorant Garamond';
         font-style: italic;
         font-weight: 500;
+    }
+
+    .projectImages {
+        display: none
+    }
+
+    .education h3 {
+        @apply text-wrap;
+        font-size: var(--title-2-size);
+        line-height: var(--title-2-line-height);
     }
 
 }
