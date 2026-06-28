@@ -1,9 +1,6 @@
 <script>
-	import { resolve } from '$app/paths';
-	import { page } from '$app/state';
-	import { locales, localizeHref } from '$lib/paraglide/runtime';
 	import './layout.css';
-	import favicon from '$lib/assets/icons/github.svg';
+	import favicon from '$lib/assets/icons/github.svg'
 
 	let { children } = $props();
 
@@ -15,11 +12,6 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-<main use:lenis></main>
+<main use:lenis>
+</main>
 {@render children()}
-
-<div style="display:none">
-	{#each locales as locale (locale)}
-		<a href={resolve(localizeHref(page.url.pathname, { locale }))}>{locale}</a>
-	{/each}
-</div>
