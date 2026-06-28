@@ -1,6 +1,10 @@
+<script>
+	import { m } from '$lib/paraglide/messages.js';
+</script>
+
 <section class="education px-(--inner-padding) py-24">
 	<div class="flex items-center justify-between max-sm:block">
-		<h2>Certifications</h2>
+		<h2>{m.educationTitles()}</h2>
 		<ul>
 			<li>
 				<a href="https://verify.skilljar.com/c/3maov5tpb6qh" target="_blank">
@@ -26,7 +30,7 @@
 				<h3>Qualität und Nutzen künstlicher Intelligenz in der Patientenversorgung</h3>
 				<span class="flex w-full justify-between">
 					<p>Ärztekammer Nordrhein</p>
-					<p>October 2023</p>
+					<p>{m.october()} 2023</p>
 				</span>
 			</li>
 		</ul>

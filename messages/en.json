@@ -1,0 +1,27 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"job1": "Frontend Developer",
+	"job2": "Aspiring Medical Researcher",
+	"location": "based in Hannover, Germany",
+
+	"line1_desk": "I'm 17, based in Hannover, and I've been building",
+	"line2_desk": "things for 9 years. Currently co-founding a",
+	"line3_desk": "startup, researching on orphan disease",
+	"line4_desk": "clinical trials and finishing my Abitur.",
+
+	"line1_mobile": "I'm 17, based in Hannover,",
+	"line2_mobile": "I've been building things",
+	"line3_mobile": "for 9 years. Currently co-founding",
+	"line4_mobile": "a startup, researching on",
+	"line5_mobile": "orphan disease clinical trials",
+	"line6_mobile": "and finishing my Abitur.",
+
+	"projectsTitle": "Projects",
+
+	"publicationsTitle": "Publications",
+	"article": "Article",
+
+	"educationTitles": "Certifications",
+
+	"october": "October"
+}

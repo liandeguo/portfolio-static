@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { m } from '$lib/paraglide/messages';
 
 	const projects = [
 		{
@@ -98,7 +99,7 @@
 		class=""
 		style="font-size: 10cqi; opacity: 0;  transform: translateY(80px);"
 	>
-		Projects
+		{m.projectsTitle()}
 	</h2>
 	<div class="flex w-full justify-center">
 		<ul class="list z-10 m-0 w-min list-none p-0 pr-3">

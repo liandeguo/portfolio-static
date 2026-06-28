@@ -2,6 +2,8 @@
 	import github from '$lib/assets/icons/github.svg';
 	import x from '$lib/assets/icons/x.svg';
 	import LinkedIn from '$lib/assets/icons/linkedin.svg';
+
+	import { m } from '$lib/paraglide/messages';
 </script>
 
 <section
@@ -18,11 +20,12 @@
 		/>
 	</div>
 
-	<h1 class="titleName z-10 uppercase">LEANDER GUO</h1>
+	<h1 class="titleName z-10 uppercase">Leander Guo</h1>
 
 	<div class="z-10 flex items-end justify-between py-6 max-sm:items-center">
 		<h3 class=" uppercase">
-			Frontend Developer <br /> Aspiring Medical Researcher <br />based in Hannover, Germany
+			{m.job1()} <br />
+			{m.job2()} <br />{m.location()}
 		</h3>
 		<span class="socials flex gap-6">
 			<a href="https://github.com/liandeguo" target="_blank"
