@@ -1,0 +1,31 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+
+	"title": "Developer & Medical Writer",
+	"meta_desc": "Leander Guo, 17-year-old developer and medical writer based in Hannover, Germany. Building software at the intersection of medicine and technology.",
+	"meta_og_desc": "17-year-old builder combining medicine and software.",
+
+	"job1": "Frontend Developer",
+	"job2": "Aspiring Medical Researcher",
+	"location": "based in Hannover, Germany",
+
+	"line1_desk": "I'm 17, based in Hannover, and I've been building",
+	"line2_desk": "things for 9 years. Currently co-founding a",
+	"line3_desk": "startup, researching on orphan disease",
+	"line4_desk": "clinical trials and finishing my Abitur.",
+
+	"line1_mobile": "17, based in hannover",
+	"line2_mobile": "9 years of building things",
+	"line3_mobile": "co-founding a startup",
+	"line4_mobile": "orphan disease resarch",
+	"line5_mobile": "finishing Abitur",
+
+	"projectsTitle": "Projects",
+
+	"publicationsTitle": "Publications",
+	"article": "Article",
+
+	"educationTitles": "Certifications",
+
+	"october": "October"
+}

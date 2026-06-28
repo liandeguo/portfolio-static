@@ -1,166 +1,180 @@
 @import 'tailwindcss';
 
 :root {
-    --color-primary: #f6f3ee;
-    --color-secondary: #f2f1ef;
-    --color-third: #eeebe3;
-    --color-contrast: #1b1711;
-    --color-accent: #B07D2A;
+	--color-primary: #f6f3ee;
+	--color-secondary: #f2f1ef;
+	--color-third: #eeebe3;
+	--color-contrast: #1b1711;
+	--color-accent: #b07d2a;
 
-    --font-color-primary: #1b1711;
-    --font-color-secondary: #8a8072;
+	--font-color-primary: #1b1711;
+	--font-color-secondary: #8a8072;
 
+	--inner-padding: 3rem;
 
-    --inner-padding: 3rem;
-
-    --font-size-micro: 0.6875rem;
-    --font-size-microPlus: 0.6875rem;
-    --font-size-mini: 0.75rem;
-    --font-size-miniPlus: 0.75rem;
-    --font-size-small: 0.8125rem;
-    --font-size-smallPlus: 0.8125rem;
-    --font-size-regular: 0.9375rem;
-    --font-size-regularPlus: 0.9375rem;
-    --font-size-large: 1.125rem;
-    --font-size-largePlus: 1.125rem;
-    --font-size-title1: 2.25rem;
-    --font-size-title2: 1.5rem;
-    --font-size-title3: 1.25rem;
-    --title-1: var(--font-weight-semibold) var(--title-1-size) /var(--title-1-line-height) var(--font-regular);
-    --title-1-size: 1.0625rem;
-    --title-1-line-height: 1.4;
-    --title-1-letter-spacing: -0.012em;
-    --title-2: var(--font-weight-semibold) var(--title-2-size) /var(--title-2-line-height) var(--font-regular);
-    --title-2-size: 1.25rem;
-    --title-2-line-height: 1.33;
-    --title-2-letter-spacing: -0.012em;
-    --title-3: var(--font-weight-semibold) var(--title-3-size) /var(--title-3-line-height) var(--font-regular);
-    --title-3-size: 1.5rem;
-    --title-3-line-height: 1.33;
-    --title-3-letter-spacing: -0.012em;
-    --title-4: var(--font-weight-semibold) var(--title-4-size) /var(--title-4-line-height) var(--font-regular);
-    --title-4-size: 2rem;
-    --title-4-line-height: 1.125;
-    --title-4-letter-spacing: -0.022em;
-    --title-5: var(--font-weight-semibold) var(--title-5-size) /var(--title-5-line-height) var(--font-regular);
-    --title-5-size: 2.5rem;
-    --title-5-line-height: 1.1;
-    --title-5-letter-spacing: -0.022em;
-    --title-6: var(--font-weight-semibold) var(--title-6-size) /var(--title-6-line-height) var(--font-regular);
-    --title-6-size: 3rem;
-    --title-6-line-height: 1;
-    --title-6-letter-spacing: -0.022em;
-    --title-7: var(--font-weight-semibold) var(--title-7-size) /var(--title-7-line-height) var(--font-regular);
-    --title-7-size: 3.5rem;
-    --title-7-line-height: 1.1;
-    --title-7-letter-spacing: -0.022em;
-    --title-8: var(--font-weight-semibold) var(--title-8-size) /var(--title-8-line-height) var(--font-regular);
-    --title-8-size: 4rem;
-    --title-8-line-height: 1.06;
-    --title-8-letter-spacing: -0.022em;
-    --title-9: var(--font-weight-semibold) var(--title-9-size) /var(--title-9-line-height) var(--font-regular);
-    --title-9-size: 4.5rem;
-    --title-9-line-height: 1;
-    --title-9-letter-spacing: -0.022em;
-    --text-large: var(--text-large-size) /var(--text-large-line-height) var(--font-regular);
-    --text-large-size: 1.0625rem;
-    --text-large-line-height: 1.6;
-    --text-large-letter-spacing: 0;
-    --text-regular: var(--text-regular-size) /var(--text-regular-line-height) var(--font-regular);
-    --text-regular-size: 0.9375rem;
-    --text-regular-line-height: 1.6;
-    --text-regular-letter-spacing: -0.011em;
-    --text-small: var(--text-small-size) /var(--text-small-line-height) var(--font-regular);
-    --text-small-size: 0.875rem;
-    --text-small-line-height: calc(21 / 14);
-    --text-small-letter-spacing: -0.013em;
-    --text-mini: var(--text-mini-size) /var(--text-mini-line-height) var(--font-regular);
-    --text-mini-size: 0.8125rem;
-    --text-mini-line-height: 1.5;
-    --text-mini-letter-spacing: -0.01em;
-    --text-micro: var(--text-micro-size) /var(--text-micro-line-height) var(--font-regular);
-    --text-micro-size: 0.75rem;
-    --text-micro-line-height: 1.4;
-    --text-micro-letter-spacing: 0;
-    --text-tiny: var(--text-tiny-size) /var(--text-tiny-line-height) var(--font-regular);
-    --text-tiny-size: 0.625rem;
-    --text-tiny-line-height: 1.5;
-    --text-tiny-letter-spacing: -0.015em;
+	--font-size-micro: 0.6875rem;
+	--font-size-microPlus: 0.6875rem;
+	--font-size-mini: 0.75rem;
+	--font-size-miniPlus: 0.75rem;
+	--font-size-small: 0.8125rem;
+	--font-size-smallPlus: 0.8125rem;
+	--font-size-regular: 0.9375rem;
+	--font-size-regularPlus: 0.9375rem;
+	--font-size-large: 1.125rem;
+	--font-size-largePlus: 1.125rem;
+	--font-size-title1: 2.25rem;
+	--font-size-title2: 1.5rem;
+	--font-size-title3: 1.25rem;
+	--title-1: var(--font-weight-semibold) var(--title-1-size) / var(--title-1-line-height)
+		var(--font-regular);
+	--title-1-size: 1.0625rem;
+	--title-1-line-height: 1.4;
+	--title-1-letter-spacing: -0.012em;
+	--title-2: var(--font-weight-semibold) var(--title-2-size) / var(--title-2-line-height)
+		var(--font-regular);
+	--title-2-size: 1.25rem;
+	--title-2-line-height: 1.33;
+	--title-2-letter-spacing: -0.012em;
+	--title-3: var(--font-weight-semibold) var(--title-3-size) / var(--title-3-line-height)
+		var(--font-regular);
+	--title-3-size: 1.5rem;
+	--title-3-line-height: 1.33;
+	--title-3-letter-spacing: -0.012em;
+	--title-4: var(--font-weight-semibold) var(--title-4-size) / var(--title-4-line-height)
+		var(--font-regular);
+	--title-4-size: 2rem;
+	--title-4-line-height: 1.125;
+	--title-4-letter-spacing: -0.022em;
+	--title-5: var(--font-weight-semibold) var(--title-5-size) / var(--title-5-line-height)
+		var(--font-regular);
+	--title-5-size: 2.5rem;
+	--title-5-line-height: 1.1;
+	--title-5-letter-spacing: -0.022em;
+	--title-6: var(--font-weight-semibold) var(--title-6-size) / var(--title-6-line-height)
+		var(--font-regular);
+	--title-6-size: 3rem;
+	--title-6-line-height: 1;
+	--title-6-letter-spacing: -0.022em;
+	--title-7: var(--font-weight-semibold) var(--title-7-size) / var(--title-7-line-height)
+		var(--font-regular);
+	--title-7-size: 3.5rem;
+	--title-7-line-height: 1.1;
+	--title-7-letter-spacing: -0.022em;
+	--title-8: var(--font-weight-semibold) var(--title-8-size) / var(--title-8-line-height)
+		var(--font-regular);
+	--title-8-size: 4rem;
+	--title-8-line-height: 1.06;
+	--title-8-letter-spacing: -0.022em;
+	--title-9: var(--font-weight-semibold) var(--title-9-size) / var(--title-9-line-height)
+		var(--font-regular);
+	--title-9-size: 4.5rem;
+	--title-9-line-height: 1;
+	--title-9-letter-spacing: -0.022em;
+	--text-large: var(--text-large-size) / var(--text-large-line-height) var(--font-regular);
+	--text-large-size: 1.0625rem;
+	--text-large-line-height: 1.6;
+	--text-large-letter-spacing: 0;
+	--text-regular: var(--text-regular-size) / var(--text-regular-line-height) var(--font-regular);
+	--text-regular-size: 0.9375rem;
+	--text-regular-line-height: 1.6;
+	--text-regular-letter-spacing: -0.011em;
+	--text-small: var(--text-small-size) / var(--text-small-line-height) var(--font-regular);
+	--text-small-size: 0.875rem;
+	--text-small-line-height: calc(21 / 14);
+	--text-small-letter-spacing: -0.013em;
+	--text-mini: var(--text-mini-size) / var(--text-mini-line-height) var(--font-regular);
+	--text-mini-size: 0.8125rem;
+	--text-mini-line-height: 1.5;
+	--text-mini-letter-spacing: -0.01em;
+	--text-micro: var(--text-micro-size) / var(--text-micro-line-height) var(--font-regular);
+	--text-micro-size: 0.75rem;
+	--text-micro-line-height: 1.4;
+	--text-micro-letter-spacing: 0;
+	--text-tiny: var(--text-tiny-size) / var(--text-tiny-line-height) var(--font-regular);
+	--text-tiny-size: 0.625rem;
+	--text-tiny-line-height: 1.5;
+	--text-tiny-letter-spacing: -0.015em;
 }
 
 * {
-    font-family: 'DM Mono';
-    box-sizing: border-box;
+	font-family: 'DM Mono';
+	box-sizing: border-box;
 }
 
 *::selection {
-  background: #000000;
-  color: #ffffff;
+	background: #000000;
+	color: #ffffff;
 }
 *::-moz-selection {
-  background: #000000;
-  color: #ffffff;
+	background: #000000;
+	color: #ffffff;
 }
 *::-webkit-selection {
-  background: #000000;
-  color: #ffffff;
+	background: #000000;
+	color: #ffffff;
 }
 
 h1 {
-    font-family: 'Cormorant Garamond';
-    font-weight: 500;
-    font-size: 13.25cqi;
-    line-height: 90%;
+	font-family: 'Cormorant Garamond';
+	font-weight: 500;
+	font-size: 13.25cqi;
+	line-height: 90%;
 }
 
-
-
 h2 {
-    font-family: 'Cormorant Garamond';
-    font-size: var(--title-9-size);
+	font-family: 'Cormorant Garamond';
+	font-size: var(--title-9-size);
 }
 
 b {
-    font-family: 'Cormorant Garamond';
-    font-size: var(--title-4-size)
+	font-family: 'Cormorant Garamond';
+	font-size: var(--title-4-size);
 }
 
 .education h3 {
-    @apply text-nowrap;
-    font-size: var(--title-4-size);
-    font-family: 'Cormorant Garamond';
-    line-height: var(--title-4-line-height);
-    font-style: italic;
-    font-weight: 600;
+	@apply text-nowrap;
+	font-size: var(--title-4-size);
+	font-family: 'Cormorant Garamond';
+	line-height: var(--title-4-line-height);
+	font-style: italic;
+	font-weight: 600;
 }
 
 .projects h3 {
-    @apply text-nowrap;
-    font-size: var(--title-6-size);
-    font-family: 'Cormorant Garamond';
-    font-style: italic;
-    font-weight: 500;
+	@apply text-nowrap;
+	font-size: var(--title-6-size);
+	font-family: 'Cormorant Garamond';
+	font-style: italic;
+	font-weight: 500;
+}
+
+.publications h3 {
+	@apply text-nowrap;
+	font-size: var(--title-3-size);
+	font-family: 'Cormorant Garamond';
+	/* font-style: italic; */
+	font-weight: 500;
 }
 
 p {
-    font-size: var(--text-regular);
+	font-size: var(--text-regular);
 }
 
 .progress-hr {
-    @apply text-[#3B3430] w-full mb-2 border;
+	@apply mb-2 w-full border text-[#3B3430];
 }
 .socials a img {
-    @apply w-6 h-6
+	@apply h-6 w-6;
 }
 
 .mf-cursor-media {
-    z-index: 0;
-    border-radius: 0px;
+	z-index: 0;
+	border-radius: 0px;
 }
 
 .mf-cursor-media-box {
-    z-index: 0;
-    border-radius: 0px;
+	z-index: 0;
+	border-radius: 0px;
 }
 
 /* SCROLL */
@@ -168,87 +182,111 @@ p {
 	@apply min-h-screen;
 }
 .textRevealWrapper {
-	@apply h-dvh relative text-3xl uppercase;
-    z-index: 10;
+	@apply relative h-dvh text-3xl uppercase;
+	z-index: 10;
 }
 .text {
-    @apply absolute top-1/2 left-1/2 text-center w-max;
-    transform: translate(-50%, -50%);
+	@apply absolute top-1/2 left-1/2 w-max text-center;
+	transform: translate(-50%, -50%);
 }
 .char {
-    opacity: 0.1;
+	opacity: 0.1;
 }
 
-
-
 .list li {
-    @apply px-2;
+	@apply px-2;
 }
 
 .list li span:hover {
-    color: #000080;
+	color: #000080;
 }
 
-
 img.swipeimage {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 100;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 350px;
+	height: 350px;
+	object-fit: cover;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
 }
 
 #researchProject:hover #researchProjectImg {
-    display: block;
+	display: block;
 }
 
 #symptomExplorerProjectImg {
-    opacity: 0;
+	opacity: 0;
 }
 
 #researchProjectImg {
-    opacity: 0;
+	opacity: 0;
 }
 
 #homelabProjectImg {
-    opacity: 0;
+	opacity: 0;
 }
 
+.projects h2 {
+	font-size: 10cqi;
+}
 
+.publications h2 {
+	font-size: 10cqi;
+}
 
-@media (max-width: 640px){
-    h1 {
-        font-size: 6rem;
-        line-height: 90%;
-    }
-    .line {
-        margin-top: -10px;
-    }
-    .word {
-        font-size: var(--title-2-size);
-    }
-    .projects h3 {
-        @apply text-nowrap;
-        font-size: var(--title-4-size);
-        font-family: 'Cormorant Garamond';
-        font-style: italic;
-        font-weight: 500;
-    }
+.education h2 {
+}
 
-    .projectImages {
-        display: none
-    }
+@media (max-width: 640px) {
+	h1 {
+		font-size: 4rem;
+		line-height: 90%;
+	}
+	.line {
+		margin-top: -15px;
+	}
+	.word {
+		font-size: var(--title-1-size);
+	}
 
-    .education h3 {
-        @apply text-wrap;
-        font-size: var(--title-2-size);
-        line-height: var(--title-2-line-height);
-    }
+	.projects h2 {
+		font-size: var(--title-7-size);
+	}
+	.publications h2 {
+		font-size: var(--title-7-size);
+	}
 
+	.education h2 {
+		font-size: var(--title-4-size);
+	}
+
+	.projects h3 {
+		@apply text-nowrap;
+		font-size: var(--title-3-size);
+		font-family: 'Cormorant Garamond';
+		font-style: italic;
+		font-weight: 500;
+	}
+
+	.publications h3 {
+		@apply text-wrap;
+		font-size: var(--title-3-size);
+		font-family: 'Cormorant Garamond';
+		font-weight: 500;
+	}
+
+	.projectImages {
+		display: none;
+	}
+
+	.education h3 {
+		@apply text-wrap;
+		font-size: var(--title-2-size);
+		line-height: var(--title-2-line-height);
+	}
 }
