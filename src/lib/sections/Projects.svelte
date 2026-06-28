@@ -94,11 +94,7 @@
 	id="projects"
 	class="projects section pin-section z-0 flex h-screen w-full flex-col items-start bg-(--color-secondary) px-(--inner-padding) py-12 max-sm:h-max"
 >
-	<h2
-		id="projectTitle"
-		class=""
-		style="font-size: 10cqi; opacity: 0;  transform: translateY(80px);"
-	>
+	<h2 id="projectTitle" style="opacity: 0;  transform: translateY(80px);">
 		{m.projectsTitle()}
 	</h2>
 	<div class="flex w-full justify-center">
@@ -119,7 +115,7 @@
 				</li>
 				<div
 					id="{project.id}Img"
-					class="projectImages absolute right-0 bottom-0 mr-6 mb-6 h-1/3 w-1/3"
+					class="projectImages right-0 bottom-0 mr-6 mb-6 h-1/3 w-1/3 max-sm:hidden sm:absolute"
 				>
 					<img
 						src={project.img}

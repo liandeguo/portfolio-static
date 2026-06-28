@@ -19,8 +19,7 @@
 		{ text: m.line2_mobile() },
 		{ text: m.line3_mobile() },
 		{ text: m.line4_mobile() },
-		{ text: m.line5_mobile() },
-		{ text: m.line6_mobile() }
+		{ text: m.line5_mobile() }
 	];
 
 	// Define which words get special classes

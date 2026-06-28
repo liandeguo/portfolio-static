@@ -22,12 +22,12 @@
 
 	<h1 class="titleName z-10 uppercase">Leander Guo</h1>
 
-	<div class="z-10 flex items-end justify-between py-6 max-sm:items-center">
+	<div class="z-10 items-end justify-between py-6 max-sm:items-center sm:flex">
 		<h3 class=" uppercase">
 			{m.job1()} <br />
 			{m.job2()} <br />{m.location()}
 		</h3>
-		<span class="socials flex gap-6">
+		<span class="socials flex gap-6 max-sm:py-6">
 			<a href="https://github.com/liandeguo" target="_blank"
 				><img title="GitHub Logo" src={github} alt="" />
 			</a>

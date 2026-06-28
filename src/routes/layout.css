@@ -231,20 +231,43 @@ img.swipeimage {
 	opacity: 0;
 }
 
+.projects h2 {
+	font-size: 10cqi;
+}
+
+.publications h2 {
+	font-size: 10cqi;
+}
+
+.education h2 {
+}
+
 @media (max-width: 640px) {
 	h1 {
-		font-size: 6rem;
+		font-size: 4rem;
 		line-height: 90%;
 	}
 	.line {
-		margin-top: -10px;
+		margin-top: -15px;
 	}
 	.word {
-		font-size: var(--title-2-size);
+		font-size: var(--title-1-size);
 	}
+
+	.projects h2 {
+		font-size: var(--title-7-size);
+	}
+	.publications h2 {
+		font-size: var(--title-7-size);
+	}
+
+	.education h2 {
+		font-size: var(--title-4-size);
+	}
+
 	.projects h3 {
 		@apply text-nowrap;
-		font-size: var(--title-4-size);
+		font-size: var(--title-3-size);
 		font-family: 'Cormorant Garamond';
 		font-style: italic;
 		font-weight: 500;
