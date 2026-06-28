@@ -25,7 +25,11 @@
 	"publicationsTitle": "Publications",
 	"article": "Article",
 
-	"educationTitles": "Certifications",
+	"educationTitles": "Education",
 
-	"october": "October"
+	"october": "October",
+	"june": "June",
+
+	"contactTitle": "Let's connect.",
+	"contactDesc": "If you'd like to contact me, are interested in my work, or want to collaborate on Health-Tech projects - feel free to reach out."
 }

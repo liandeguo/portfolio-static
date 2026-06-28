@@ -10,8 +10,8 @@
 	"location": "aus Hannover, Deutschland",
 
 	"line1_desk": "Ich bin 17, aus Hannover und entwickle",
-	"line2_desk": "Software seit 9 Jahren. Aktuell Mitgründes eines",
-	"line3_desk": "startup, forschung an studien über",
+	"line2_desk": "Software seit 9 Jahren. Aktuell Mitgründer eines",
+	"line3_desk": "startup, forschung an Studien über",
 	"line4_desk": "Waisenkrankheiten und vorbereitung fürs abitur.",
 
 	"line1_mobile": "Ich bin 17, aus Hannover",
@@ -26,7 +26,11 @@
 	"publicationsTitle": "Publikationen",
 	"article": "Artikel",
 
-	"educationTitles": "Zertifizierung",
+	"educationTitles": "Bildung",
 
-	"october": "Oktober"
+	"october": "Oktober",
+	"june": "Juni",
+
+	"contactTitle": "Let's connect.",
+	"contactDesc": "If you'd like to contact me, are interested in my work, or want to collaborate on Health-Tech projects - feel free to reach out."
 }
