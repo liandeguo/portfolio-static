@@ -1,6 +1,11 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"job1": "Frontend Developer",
+
+	"title": "Entwickler & Wissenschaftsautor",
+	"meta_desc": "Leander Guo ist ein 17-jähriger Software Entwickler und Medizinischer Autor aus Hannover. Er arbeitet an Software, die Medizin und Technologie näherbringen.",
+	"meta_og_desc": "17-jähriger Softwareentwickler",
+
+	"job1": "Frontend Entwickler",
 	"job2": "Medizinischer Forscher",
 	"location": "aus Hannover, Deutschland",
 

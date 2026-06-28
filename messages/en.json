@@ -1,5 +1,10 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+
+	"title": "Developer & Medical Writer",
+	"meta_desc": "Leander Guo, 17-year-old developer and medical writer based in Hannover, Germany. Building software at the intersection of medicine and technology.",
+	"meta_og_desc": "17-year-old builder combining medicine and software.",
+
 	"job1": "Frontend Developer",
 	"job2": "Aspiring Medical Researcher",
 	"location": "based in Hannover, Germany",

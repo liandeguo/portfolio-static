@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { m, meta_desc } from '$lib/paraglide/messages';
 
 	import Cursix from 'cursix';
 	import Nav from '$lib/Nav.svelte';
@@ -49,11 +50,8 @@
 </script>
 
 <svelte:head>
-	<title>Leander Guo - Developer & Medical Writer | Hannover</title>
-	<meta
-		name="description"
-		content="Leander Guo, 17-year-old developer and medical writer based in Hannover, Germany. Building software at the intersection of medicine and technology."
-	/>
+	<title>Leander Guo - {m.title()}</title>
+	<meta name="description" content={m.meta_desc()} />
 	<script type="application/ld+json">
         const schema = {
             "@context": "https://schema.org",
@@ -75,8 +73,8 @@
         };
 	</script>
 	<!-- Open Graph / Social -->
-	<meta property="og:title" content="Leander Guo - Developer & Medical Writer" />
-	<meta property="og:description" content="17-year-old builder combining medicine and software." />
+	<meta property="og:title" content="Leander Guo - {m.title()}" />
+	<meta property="og:description" content={m.meta_og_desc()} />
 	<meta property="og:type" content="profile" />
 	<meta property="og:image" content="/assets/leanderguo.webp" />
 	<meta property="og:url" content="https://liande.me" />
@@ -90,18 +88,9 @@
 </svelte:head>
 
 <Nav></Nav>
-
-<!-- Hero Section -->
 <Hero></Hero>
-
-<!-- Info Text Scroll Reveal -->
 <About></About>
-
-<!-- Projects Listed -->
 <Projects />
-<!-- Publications Listed -->
 <Publications></Publications>
-
 <Education></Education>
-
 <Footer></Footer>
