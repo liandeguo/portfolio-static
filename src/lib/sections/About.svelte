@@ -1,10 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import ScrollTrigger from 'gsap/ScrollTrigger';
 	import { m } from '$lib/paraglide/messages.js';
 
-	gsap.registerPlugin(ScrollTrigger);
 	let lines = $state();
 	// Define your lines with words and optional classes
 	const linesDesktop = [
@@ -47,7 +44,11 @@
 	let wrapper;
 	let textRevealWrapper;
 
-	onMount(() => {
+	onMount(async () => {
+		const { gsap } = await import('gsap');
+		const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+		gsap.registerPlugin(ScrollTrigger);
+
 		if (!wrapper) return;
 
 		const chars = gsap.utils.toArray('.char');
