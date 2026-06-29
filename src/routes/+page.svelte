@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { m, meta_desc } from '$lib/paraglide/messages';
-	import { gsap } from 'gsap';
+
 	import Cursix from 'cursix';
 	import Nav from '$lib/Nav.svelte';
 	import Footer from '$lib/Footer.svelte';
@@ -14,6 +14,7 @@
 	import Contact from '$lib/sections/Contact.svelte';
 	// Cursor
 	onMount(async () => {
+		const { gsap } = await import('gsap');
 		Cursix.registerGSAP(gsap);
 		const hannoverEl = document.getElementById('hannoverEl');
 		const titleEl = document.querySelector('.titleName');
