@@ -1,7 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { m, meta_desc } from '$lib/paraglide/messages';
 
 	import Cursix from 'cursix';
@@ -13,9 +11,10 @@
 	import Projects from '$lib/sections/Projects.svelte';
 	import Publications from '$lib/sections/Publications.svelte';
 	import Education from '$lib/sections/Education.svelte';
-
+	import Contact from '$lib/sections/Contact.svelte';
 	// Cursor
 	onMount(async () => {
+		const { gsap } = await import('gsap');
 		Cursix.registerGSAP(gsap);
 		const hannoverEl = document.getElementById('hannoverEl');
 		const titleEl = document.querySelector('.titleName');
@@ -93,4 +92,5 @@
 <Projects />
 <Publications></Publications>
 <Education></Education>
-<Footer></Footer>
+<Contact></Contact>
+<!-- <Footer></Footer> -->

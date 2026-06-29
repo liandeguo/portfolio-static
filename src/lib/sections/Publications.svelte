@@ -18,11 +18,11 @@
 	];
 </script>
 
-<section class="publications z-0 flex flex-col items-end px-(--inner-padding) py-12 max-sm:h-max">
+<section class="publications z-0 flex flex-col items-end px-(--inner-padding) py-24 max-sm:h-max">
 	<h2 id="publicationsTitle" style=" ">{m.publicationsTitle()}</h2>
 	<ul class="list z-10 m-0 flex w-full list-none flex-col p-0 pr-3 max-sm:gap-3">
 		{#each publications as publication}
-			<div class="hover:bg-[#FDFDFC]">
+			<div class="hover:bg-[#fafafa]">
 				<hr class="project mb-3" style="" />
 				<li class="publication sm:mb-3">
 					<a href={publication.url} target="_blank" class="flex w-full pr-12 max-sm:flex-col">

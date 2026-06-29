@@ -1,7 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { m } from '$lib/paraglide/messages';
 
 	const projects = [
@@ -20,8 +18,11 @@
 		{ name: 'Homelab', img: '/assets/homelab.webp', url: '#', id: 'homelabProject' }
 	];
 
-	onMount(() => {
+	onMount(async () => {
+		const { gsap } = await import('gsap');
+		const { ScrollTrigger } = await import('gsap/ScrollTrigger');
 		gsap.registerPlugin(ScrollTrigger);
+
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '#projects',

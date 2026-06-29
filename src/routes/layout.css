@@ -290,3 +290,7 @@ img.swipeimage {
 		line-height: var(--title-2-line-height);
 	}
 }
+
+.social {
+	filter: invert(1);
+}
